@@ -1,0 +1,605 @@
+/* =====================================================
+   De tu mano - hoja de estilos externa (compartida)
+   Se carga DESPUÉS de bootstrap.min.css y personaliza el
+   diseño: colores, tarjetas, menú, transiciones y animaciones.
+   La estructura en columnas y el diseño responsivo los resuelve
+   Bootstrap (container, row, col-*, navbar, ratio, img-fluid).
+   ===================================================== */
+
+/* ===== Base ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #26324D;
+    background-color: #FFFFFF;
+}
+
+a {
+    color: #1F3C88;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+/* ===== Cabecera y menú (navbar de Bootstrap) ===== */
+header {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #DCE6FA;
+}
+
+.navbar .marca {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 290px;
+    padding: 0;
+}
+
+.marca img {
+    width: 46px;
+    height: 46px;
+    margin-right: 10px;
+    transition: transform 0.6s ease;
+}
+
+.marca img:hover {
+    transform: scale(1.12);
+}
+
+.marca .nombre-sitio {
+    font-size: 20px;
+    color: #1F3C88;
+    line-height: 1.1;
+}
+
+.marca .lema {
+    width: 100%;
+    margin-left: 56px;
+    margin-top: -14px;
+    font-size: 11px;
+    color: #26324D;
+    white-space: normal;
+}
+
+.navbar .nav-link {
+    padding: 14px 9px;
+    font-size: 13px;
+    color: #26324D;
+    border-bottom: 3px solid #FFFFFF;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    background-color: #E8E4FB;
+    color: #1F3C88;
+    border-bottom: 3px solid #5B5BD6;
+}
+
+.navbar .nav-link.active {
+    background-color: transparent;
+}
+
+.navbar .dropdown-menu {
+    min-width: 260px;
+    margin-top: 0;
+    border: 1px solid #DCE6FA;
+    border-radius: 8px;
+}
+
+.navbar .dropdown-item {
+    padding: 10px 14px;
+    font-size: 13px;
+    color: #26324D;
+    white-space: normal;
+}
+
+.navbar .dropdown-item:hover {
+    background-color: #E8E4FB;
+    color: #1F3C88;
+}
+
+/* Pantallas grandes: el submenú aparece al pasar el mouse */
+@media (min-width: 1200px) {
+    .navbar .dropdown:hover > .dropdown-menu {
+        display: block;
+    }
+}
+
+/* Pantallas menores: menú colapsable con los submenús visibles */
+@media (max-width: 1199.98px) {
+    .navbar .dropdown-menu {
+        display: block;
+        border: 0;
+        background-color: transparent;
+        padding: 0 0 6px 16px;
+    }
+
+    .navbar .nav-link {
+        border-bottom: 0;
+        padding: 10px 8px 4px 8px;
+        font-weight: bold;
+    }
+
+    .navbar .dropdown-item {
+        padding: 5px 8px;
+        color: #5A6785;
+    }
+}
+
+/* ===== Contenido principal ===== */
+main {
+    padding-top: 26px;
+    padding-bottom: 26px;
+}
+
+h1 {
+    font-size: 28px;
+    color: #1F3C88;
+}
+
+h2 {
+    font-size: 20px;
+    color: #1F3C88;
+}
+
+h3 {
+    font-size: 16px;
+    color: #1F3C88;
+}
+
+.boton {
+    display: inline-block;
+    padding: 9px 20px;
+    background-color: #5B5BD6;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 13px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #1F3C88;
+}
+
+.boton-claro {
+    background-color: #FFFFFF;
+    color: #5B5BD6;
+    border: 1px solid #5B5BD6;
+}
+
+.boton-claro:hover {
+    background-color: #E8E4FB;
+}
+
+/* ===== Inicio: hero ===== */
+.hero {
+    background-color: #E4EEFF;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.hero .texto {
+    padding: 44px 30px 30px 40px;
+}
+
+.hero h1 {
+    font-size: 34px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    font-size: 15px;
+    margin-bottom: 24px;
+}
+
+.hero img {
+    display: block;
+}
+
+/* ===== Inicio: accesos rápidos ===== */
+.accesos-titulo {
+    margin-top: 30px;
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.acceso {
+    display: block;
+    height: 100%;
+    min-height: 170px;
+    padding: 20px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #26324D;
+    transition: background-color 0.3s ease;
+}
+
+.acceso img {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 14px;
+}
+
+.acceso h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.acceso p {
+    font-size: 12px;
+    color: #5B5BD6;
+}
+
+.lila {
+    background-color: #E8E4FB;
+}
+
+.menta {
+    background-color: #D3F5EA;
+}
+
+.celeste {
+    background-color: #DCEEFF;
+}
+
+.durazno {
+    background-color: #FFEFD0;
+}
+
+.lila:hover {
+    background-color: #D6CFF7;
+}
+
+.menta:hover {
+    background-color: #BCEBDB;
+}
+
+.celeste:hover {
+    background-color: #C6E1FB;
+}
+
+.durazno:hover {
+    background-color: #FBE2B4;
+}
+
+/* ===== Inicio: ¿Por qué este sitio? ===== */
+.por-que {
+    margin: 30px 0 0 0;
+    padding: 24px 14px;
+    background-color: #EEF3FD;
+    border-radius: 10px;
+}
+
+.por-que h2 {
+    margin-bottom: 8px;
+}
+
+.por-que .valores {
+    color: #1F3C88;
+}
+
+.por-que .valores img {
+    float: left;
+    width: 72px;
+    height: 72px;
+    margin-right: 24px;
+}
+
+/* ===== Páginas internas ===== */
+.encabezado-pagina {
+    margin-bottom: 22px;
+}
+
+.encabezado-pagina h1 {
+    margin-bottom: 6px;
+}
+
+.lateral {
+    padding: 14px 10px;
+    background-color: #EEF3FD;
+    border-radius: 10px;
+}
+
+.lateral li a {
+    display: block;
+    padding: 10px 12px;
+    font-size: 13px;
+    text-decoration: none;
+    color: #26324D;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.lateral li a:hover {
+    background-color: #E8E4FB;
+    color: #1F3C88;
+}
+
+.lateral li a.activo {
+    background-color: #DCE6FA;
+    color: #1F3C88;
+    border-left: 4px solid #5B5BD6;
+}
+
+.principal h2 {
+    margin-bottom: 12px;
+}
+
+.tarjeta {
+    margin: 0 0 16px 0;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border: 1px solid #DCE6FA;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.tarjeta:hover {
+    background-color: #F7F9FF;
+}
+
+.fila-dos .tarjeta {
+    margin-bottom: 0;
+}
+
+.tarjeta img {
+    float: left;
+    width: 52px;
+    height: 52px;
+    margin-right: 16px;
+}
+
+.tarjeta h3 {
+    margin-bottom: 8px;
+}
+
+.tarjeta p {
+    margin-bottom: 10px;
+}
+
+.tarjeta ul {
+    margin-bottom: 12px;
+    margin-left: 18px;
+    list-style-type: disc;
+}
+
+.tarjeta li {
+    margin-bottom: 4px;
+}
+
+.tarjeta .cuerpo {
+    overflow: hidden;
+}
+
+.fuente {
+    font-size: 12px;
+    color: #5A6785;
+}
+
+/* Video incrustado: .ratio ratio-16x9 de Bootstrap lo hace proporcional */
+.tarjeta .video {
+    clear: both;
+    margin: 16px 0 10px 0;
+}
+
+/* Contenido desplegable de las guías */
+.mas-info {
+    margin-top: 6px;
+}
+
+.mas-info .boton {
+    margin-right: 8px;
+}
+
+/* Transformaciones y animaciones (tema 4.2 del manual) */
+@keyframes latido {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.por-que .valores img {
+    animation-name: latido;
+    animation-duration: 1.6s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+.acceso:hover {
+    transform: scale(1.04);
+}
+
+.acceso {
+    transition: all 0.4s ease;
+}
+
+footer .redes img {
+    transition: transform 1s ease;
+}
+
+footer .redes img:hover {
+    transform: rotateY(360deg);
+}
+
+.aviso {
+    margin-top: 6px;
+    padding: 12px 16px;
+    background-color: #FFEFD0;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+/* ===== Directorio ===== */
+.recurso .tipo {
+    font-size: 12px;
+    color: #5A6785;
+}
+
+.recurso .datos {
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+/* ===== Pie de página ===== */
+footer {
+    padding: 26px 0 12px 0;
+    margin-top: 20px;
+    background-color: #14346B;
+    color: #FFFFFF;
+}
+
+footer .marca-pie img {
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+footer .marca-pie p {
+    font-size: 12px;
+}
+
+footer .marca-pie strong {
+    font-size: 16px;
+}
+
+footer .enlaces-pie li {
+    display: inline-block;
+    margin: 0 12px 6px 0;
+}
+
+footer .enlaces-pie a {
+    color: #FFFFFF;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+footer .enlaces-pie a:hover {
+    text-decoration: underline;
+}
+
+footer .redes li {
+    display: inline-block;
+    margin-right: 8px;
+}
+
+footer .redes img {
+    width: 30px;
+    height: 30px;
+}
+
+footer .volver {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 6px 14px;
+    background-color: #FFFFFF;
+    color: #14346B;
+    font-size: 12px;
+    text-decoration: none;
+    border-radius: 16px;
+    transition: background-color 0.3s ease;
+}
+
+footer .volver:hover {
+    background-color: #E8E4FB;
+}
+
+.nota-final {
+    padding: 12px 30px;
+    background-color: #0F2A57;
+    color: #FFFFFF;
+    font-size: 11px;
+    text-align: center;
+}
+
+/* ===== Formulario de sugerencias ===== */
+.sugerencias {
+    margin-top: 30px;
+    padding: 24px 20px;
+    background-color: #FFFFFF;
+    border: 1px solid #DCE6FA;
+    border-radius: 10px;
+}
+
+.sugerencias h2 {
+    margin-bottom: 6px;
+}
+
+.sugerencias > p {
+    margin-bottom: 14px;
+}
+
+.campo {
+    margin-bottom: 14px;
+}
+
+.campo label {
+    font-size: 13px;
+    color: #1F3C88;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    padding: 9px 12px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #26324D;
+    background-color: #F7F9FF;
+    border: 1px solid #C9D7F2;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: #5B5BD6;
+}
+
+#error-form {
+    margin-bottom: 14px;
+    padding: 10px 14px;
+    background-color: #FFE3E3;
+    color: #8A1C1C;
+    font-size: 13px;
+    border-radius: 8px;
+}
+
+#confirmacion {
+    padding: 20px;
+    background-color: #D3F5EA;
+    border-radius: 10px;
+}
+
+#confirmacion h3 {
+    margin-bottom: 6px;
+}
+
+#confirmacion p {
+    margin-bottom: 10px;
+}
+
+form button.boton {
+    border: 0;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+}
